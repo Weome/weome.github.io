@@ -103,37 +103,9 @@ building_timeline
         fill: [
             {value:'#fff', duration: 0},
             {value:'#f1c40f', duration: 200},
-        ],
-        easing: 'easeInOutQuart',
-    })
-    .add({
-        targets: '#lightpost polygon',
-        fill: [
-            {value:'#f1c40f', duration: 0},
             {value:'#fff', duration: 200},
-        ],
-        easing: 'easeInOutQuart',
-    })
-    .add({
-        targets: '#lightpost polygon',
-        fill: [
-            {value:'#fff', duration: 0},
             {value:'#f1c40f', duration: 100},
-        ],
-        easing: 'easeInOutQuart',
-    })
-    .add({
-        targets: '#lightpost polygon',
-        fill: [
-            {value:'#f1c40f', duration: 0},
             {value:'#fff', duration: 100},
-        ],
-        easing: 'easeInOutQuart',
-    })
-    .add({
-        targets: '#lightpost polygon',
-        fill: [
-            {value:'#fff', duration: 0},
             {value:'#f1c40f', duration: 100},
         ],
         easing: 'easeInOutQuart',
