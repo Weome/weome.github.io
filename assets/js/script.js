@@ -5,7 +5,6 @@ var cloud_timeline = anime.timeline({
 
 var window_timeline = anime.timeline({
     loop: true,
-    direction: 'alternate',
 });
 
 window_timeline
