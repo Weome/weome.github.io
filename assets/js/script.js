@@ -3,6 +3,28 @@ var cloud_timeline = anime.timeline({
     loop: true,
 });
 
+var window_timeline = anime.timeline({
+    loop: true,
+    direction: 'alternate',
+});
+
+window_timeline
+    .add({
+        targets: '#window',
+        fill: [
+            {value: '#f1c40f', duration: 0, delay: function(el, i, l) {
+                if (i % 2 == 0) {
+                    return i * 1600;
+                } else {
+                    return i * 900;
+                }
+            }},
+            {value: '#fff', duration: 1000, delay: function(el, i, l) { return i * 1600;}}
+        ],
+        easing: 'linear',
+        offset: 200
+    })
+
 cloud_timeline
     .add({
         targets: '#cloud-one',
