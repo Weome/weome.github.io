@@ -77,7 +77,7 @@ header svg#city .clouds {
     svg#city {
         height: 65%;
         position: relative;
-        right: 0;
+        transform: translateX(10%);
         float: right;
     }
 }
