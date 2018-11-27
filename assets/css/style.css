@@ -52,17 +52,16 @@ header #logo {
 	-moz-animation: Gradient 15s ease infinite;
 	animation: Gradient 15s ease infinite;
     overflow: hidden;
-    height: 117px;
     max-width: 501px;
-    margin: 50px auto -50px;
+    margin: 50px auto 0;
 }
 
 header #logo img {
     position: relative;
-    -webkit-transform: scale(1.06);
-    transform: scale(1.06);
     z-index: 10;
-    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    margin: -5px 0;
 }
 
 header svg .building {
