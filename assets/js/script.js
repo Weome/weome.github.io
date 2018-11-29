@@ -7,6 +7,60 @@ var window_timeline = anime.timeline({
     loop: true,
 });
 
+var desk_on = anime.timeline({
+    autoplay: false,
+});
+
+desk_on
+    .add({
+        targets: '#power-button',
+        fill: [{value: '#27ae60'}]
+    })
+    .add({
+        targets: '#light',
+        fill: [
+            {value:'#fff', duration: 0},
+            {value:'#f1c40f', duration: 200},
+            {value:'#fff', duration: 200},
+            {value:'#f1c40f', duration: 100},
+            {value:'#fff', duration: 100},
+            {value:'#f1c40f', duration: 100},
+        ],
+        easing: 'easeInOutQuart',
+    })
+    .add({
+        targets: '#screen-2',
+        fill: [
+            {value:'#fff', duration: 100}
+        ],
+    })
+    .add({
+        targets: '#screen',
+        fill: [
+            {value:'#ecf0f1', duration: 100},
+        ]
+    })
+    .add({
+        targets: '#light-spray',
+        fill: [{value:'#f1c40f4d'}],
+        easing: 'easeInOutQuart',
+    });
+
+var toggle = false;
+
+document.getElementById("power-button").onclick = function() {
+    if (!toggle) {
+        desk_on.play();
+    } else {
+        document.getElementById("light").setAttribute("fill", "#fff");
+        document.getElementById("light-spray").style.fill = "transparent";
+        document.getElementById("power-button").setAttribute("fill", "#030104");
+        document.getElementById("screen").setAttribute("fill", "#192e33");
+        document.getElementById("screen-2").setAttribute("fill", "#243e44");
+    }
+    toggle = !toggle;
+}
+
 window_timeline
     .add({
         targets: '#window',
