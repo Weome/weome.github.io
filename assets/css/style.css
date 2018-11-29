@@ -74,6 +74,10 @@ header svg#city .clouds {
     transform-origin: 50% 50%;
 }
 
+svg #power-button {
+    cursor: pointer;
+}
+
 section h1 {
     text-align: center;
     font-size: 2.5rem;
