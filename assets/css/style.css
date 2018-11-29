@@ -74,15 +74,24 @@ header svg#city .clouds {
     transform-origin: 50% 50%;
 }
 
-section {
-    padding: 50px;
+section h1 {
+    text-align: center;
+    font-size: 2.5rem;
 }
 
 section:nth-of-type(1) {
-    background: -webkit-gradient(linear,left top,left bottom,from(#00467f),to(#00c6fb));
-    background: -webkit-linear-gradient(#00467f,#00c6fb);
-    background: -o-linear-gradient(#00467f,#00c6fb);
-    background: linear-gradient(#00467f,#00c6fb);
+    background: -webkit-gradient(linear, left top, left bottom, from(#00467f), to(#00c6fb));
+    background: -webkit-linear-gradient(#00467f, #00c6fb);
+    background: -o-linear-gradient(#00467f, #00c6fb);
+    background: linear-gradient(#00467f, #00c6fb);
+    color: #fff;
+}
+
+section:nth-of-type(2) {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fd79a8), to(#e84393));
+    background: -webkit-linear-gradient(#fd79a8, #e84393);
+    background: -o-linear-gradient(#fd79a8, #e84393);
+    background: linear-gradient(#fd79a8, #e84393);
     color: #fff;
 }
 
