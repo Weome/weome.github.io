@@ -1,15 +1,27 @@
 var building_timeline = anime.timeline();
-var cloud_timeline = anime.timeline({
+
+var loop_timeline = anime.timeline({
     loop: true,
 });
 
-var window_timeline = anime.timeline({
+var desk_timeline = anime.timeline({
     loop: true,
-});
+    direction: 'alternate',
+})
 
 var desk_on = anime.timeline({
     autoplay: false,
 });
+
+desk_timeline
+    .add({
+        targets: '#power-button',
+        fill: [
+            {value: '#030104', duration: 0},
+            {value: '#27ae60', duration: 1000},
+        ],
+        easing: 'easeInOutQuart',
+    });
 
 desk_on
     .add({
@@ -49,6 +61,7 @@ desk_on
 var toggle = false;
 
 document.getElementById("power-button").onclick = function() {
+    desk_timeline.pause();
     if (!toggle) {
         desk_on.play();
     } else {
@@ -61,7 +74,7 @@ document.getElementById("power-button").onclick = function() {
     toggle = !toggle;
 }
 
-window_timeline
+loop_timeline
     .add({
         targets: '#window',
         fill: [
@@ -77,8 +90,6 @@ window_timeline
         easing: 'linear',
         offset: 200
     })
-
-cloud_timeline
     .add({
         targets: '#cloud-one',
         translateX: [
