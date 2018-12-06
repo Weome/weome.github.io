@@ -76,13 +76,34 @@ document.getElementById("power-button").onclick = function() {
 
 loop_timeline
     .add({
+        targets: '#plane-group',
+        translateX: {value: 285, duration: 1},
+        scaleX: {value: 0.1, duration: 1},
+        scaleY: {value: -0.1, duration: 1},
+        rotate: [
+            {value: "0deg", duration: 0},
+            {value: "3deg", duration: 1000},
+            {value: "-3deg", duration: 1000},
+            {value: "3deg", duration: 1000},
+            {value: "-3deg", duration: 1000},
+            {value: "3deg", duration: 1000},
+            {value: "-3deg", duration: 1000},
+            {value: "3deg", duration: 1000},
+            {value: "-3deg", duration: 1000},
+            {value: "3deg", duration: 1000},
+            {value: "-3deg", duration: 1000},
+        ],
+        easing: 'linear',
+        offset: 0,
+    })
+    .add({
         targets: '#plane',
         translateX: [
             {value: -400, duration: 0},
             {value: 450, duration: 16000}
         ],
         scale: {value: 0.35, duration: 1},
-        translateY: 60,
+        translateY: {value: 90, duration: 1},
         easing: 'linear',
         offset: 0,
     })

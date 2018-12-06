@@ -78,6 +78,10 @@ svg #power-button {
     cursor: pointer;
 }
 
+svg #plane-group {
+    transform-origin: 50% 50%;
+}
+
 section h1 {
     text-align: center;
     font-size: 2.5rem;
