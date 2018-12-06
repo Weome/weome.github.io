@@ -76,6 +76,17 @@ document.getElementById("power-button").onclick = function() {
 
 loop_timeline
     .add({
+        targets: '#plane',
+        translateX: [
+            {value: -400, duration: 0},
+            {value: 450, duration: 16000}
+        ],
+        scale: {value: 0.35, duration: 1},
+        translateY: 60,
+        easing: 'linear',
+        offset: 0,
+    })
+    .add({
         targets: '#window',
         fill: [
             {value: '#f1c40f', duration: 0, delay: function(el, i, l) {
