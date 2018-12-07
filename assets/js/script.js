@@ -100,10 +100,10 @@ loop_timeline
         targets: '#plane',
         translateX: [
             {value: -400, duration: 0},
-            {value: 450, duration: 16000}
+            {value: 450, duration: 15000}
         ],
         scale: {value: 0.35, duration: 1},
-        translateY: {value: 90, duration: 1},
+        translateY: {value: 70, duration: 1},
         easing: 'linear',
         offset: 0,
     })
