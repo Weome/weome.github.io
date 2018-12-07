@@ -9,9 +9,9 @@ function init() {
 	var ctx = canvas.getContext('2d');
 	var bufferCtx = buffer.getContext('2d');
 	var numberOfDrops = 200;
-	var createDrop = function () {
+	var createDrop = function (snow) {
 		var drop = {};
-		drop.color = '#000';
+		drop.color = '#2d3436';
 		var cloud = [
 			document.getElementById('cloud-one'),
 			document.getElementById('cloud-two'),
@@ -23,7 +23,7 @@ function init() {
 		drop.draw = function (context) {
 			context.globalAlpha = drop.alpha;
 			context.beginPath();
-			context.clearRect(drop.x, drop.y, drop.width, drop.height);
+			context.clearRect(drop.x - 5, drop.y - 5, drop.width + 5, drop.height + 5);
 			if (drop.y > canvas.height) {
 				drop.y = (cloud.getBoundingClientRect().top + cloud.getBoundingClientRect().height) | 0;
 				drop.update();
@@ -31,7 +31,11 @@ function init() {
 				drop.y += drop.speed;
 				drop.x += 2;
 			}
-			context.rect(drop.x, drop.y, drop.width, drop.height);
+			if (!snow) {
+				context.rect(drop.x, drop.y, drop.width, drop.height);
+			} else {
+				context.arc(drop.x, drop.y, drop.width, 0, Math.PI * 2, true);
+			}
 			context.fillStyle = drop.color;
 			context.fill();
 			context.globalAlpha = 1;
@@ -41,15 +45,16 @@ function init() {
 			drop.width = anime.random(1, 2);
 			drop.height = anime.random(5, 10);
 			drop.alpha = anime.random(0.25, 1);
-			drop.speed = anime.random(3, 5);
+			drop.speed = snow ? anime.random(1, 3) : anime.random(3, 5);
 		}
 		drop.update();
 		return drop;
 	};
 	var getRainDrops = function () {
 		var drops = [];
+		var snow = (Math.random() * 100 | 0) % 2 == 0;
 		for (var i = 0; i < numberOfDrops; i++) {
-			drops.push(createDrop());
+			drops.push(createDrop(snow));
 		}
 		return drops;
 	};
