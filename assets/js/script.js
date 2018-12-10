@@ -19,13 +19,13 @@ function init() {
 			document.getElementById('cloud-four'),
 		][Math.floor(Math.random() * Math.floor(4))];
 		var cloud_offset = (cloud.getBoundingClientRect().width / 4) | 0;
-		drop.y = anime.random((cloud.getBoundingClientRect().top + cloud.getBoundingClientRect().height) | 0, canvas.height);
+		drop.y = anime.random((cloud.getBoundingClientRect().top + window.pageYOffset + cloud.getBoundingClientRect().height) | 0, canvas.height);
 		drop.draw = function (context) {
 			context.globalAlpha = drop.alpha;
 			context.beginPath();
 			context.clearRect(drop.x - 5, drop.y - 5, drop.width + 5, drop.height + 5);
 			if (drop.y > canvas.height) {
-				drop.y = (cloud.getBoundingClientRect().top + cloud.getBoundingClientRect().height) | 0;
+				drop.y = (cloud.getBoundingClientRect().top + window.pageYOffset + cloud.getBoundingClientRect().height) | 0;
 				drop.update();
 			} else {
 				drop.y += drop.speed;
