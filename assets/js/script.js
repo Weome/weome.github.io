@@ -8,7 +8,7 @@ function init() {
 	buffer.height = canvas.height;
 	var ctx = canvas.getContext('2d');
 	var bufferCtx = buffer.getContext('2d');
-	var numberOfDrops = 200;
+	var numberOfDrops = 180;
 	var createDrop = function (snow) {
 		var drop = {};
 		drop.color = '#2d3436';
@@ -23,7 +23,7 @@ function init() {
 		drop.draw = function (context) {
 			context.globalAlpha = drop.alpha;
 			context.beginPath();
-			context.clearRect(drop.x - 5, drop.y - 5, drop.width + 5, drop.height + 5);
+			context.clearRect(drop.x - 3, drop.y - 3, drop.width + 3, drop.height + 3);
 			if (drop.y > canvas.height) {
 				drop.y = (cloud.getBoundingClientRect().top + window.pageYOffset + cloud.getBoundingClientRect().height) | 0;
 				drop.update();
@@ -63,7 +63,7 @@ function init() {
 		loop: true,
 		begin: function (anim) {
 			if (!anim.began) return;
-			if ((Math.random() * 100 | 0) % 4 == 0) {
+			if ((Math.random() * 100 | 0) % 4 === 0) {
 				var rainDrops = getRainDrops();
 				anime({
 					targets: rainDrops,
@@ -73,7 +73,8 @@ function init() {
 						rainDrops.forEach(function (drop) {
 							drop.draw(bufferCtx);
 						});
-						ctx.clearRect(0, 0, canvas.width, canvas.height);
+						ctx.clearRect(0, document.getElementById('cloud-four')
+							.getBoundingClientRect().top, canvas.width, canvas.height);
 						ctx.drawImage(buffer, 0, 0);
 					}
 				});
