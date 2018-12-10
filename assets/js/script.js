@@ -73,8 +73,7 @@ function init() {
 						rainDrops.forEach(function (drop) {
 							drop.draw(bufferCtx);
 						});
-						ctx.clearRect(0, document.getElementById('cloud-four')
-							.getBoundingClientRect().top, canvas.width, canvas.height);
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
 						ctx.drawImage(buffer, 0, 0);
 					}
 				});
