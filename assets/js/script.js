@@ -139,19 +139,19 @@ function init() {
 		}, ]
 	}).add({
 		targets: '#light-spray',
-		fill: [{
-			value: '#f1c40f4d'
-		}],
+		fill: [
+			{ value: '#f1c40f4d', duration: 1 }
+		],
 		easing: 'easeInOutQuart',
 	});
 	var toggle = false;
-	document.getElementById("power-button").onclick = function () {
+	document.getElementById("phone").onclick = function () {
 		desk_timeline.pause();
 		if (!toggle) {
 			desk_on.play();
 		} else {
 			document.getElementById("light").setAttribute("fill", "#fff");
-			document.getElementById("light-spray").style.fill = "transparent";
+			document.getElementById("light-spray").style.fill = "#f1c40f00";
 			document.getElementById("power-button").setAttribute("fill", "#030104");
 			document.getElementById("screen").setAttribute("fill", "#192e33");
 			document.getElementById("screen-2").setAttribute("fill", "#243e44");

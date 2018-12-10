@@ -79,7 +79,7 @@ header svg#city .clouds {
     transform-origin: 50% 50%;
 }
 
-svg #power-button {
+svg #phone {
     cursor: pointer;
 }
 
@@ -108,7 +108,9 @@ section .team {
 
 section .member,
 section .content {
-    margin: auto;
+    width: 225px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 section .content .name,
@@ -117,9 +119,8 @@ section .content .title {
 }
 
 section .photo {
-    width: 150px;
-    height: 150px;
-    border: 4px solid white;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
     margin: auto;
@@ -131,57 +132,29 @@ section .photo img {
 }
 
 section .product {
-    margin: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
-section .product .content {
-    width: 0px;
-    flex-grow: 2;
+section .product svg {
+    min-height: 400px;
+}
+
+section .product > * {
+    min-width: 500px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 50%;
 }
 
 section .product .prototype img {
     width: 100%;
     max-width: 550px;
     height: auto;
-}
-
-section .contact .input {
-    clear: both;
-    margin: 0 auto 10px;
-    text-align: center;
-    width: 241px;
-}
-
-section .contact .inputform {
-    background: url(../formtextfield.png) no-repeat scroll 0 0 transparent;
-    border: medium none;
-    color: #6D635D;
-    font-size: 15px;
-    font-style: italic;
-    height: 40px;
-    padding-left: 18px;
-    width: 241px;
-}
-
-section .contact .textareaform {
-    background: url("../textarea.png") no-repeat scroll 0 0 transparent;
-    border: medium none;
-    color: #6D635D;
-    font-size: 15px;
-    font-style: italic;
-    height: 150px;
-    padding-left: 18px;
-    padding-top: 12px;
-    resize: none;
-    width: 241px;
-}
-
-section .contact .submit-contact {
-    padding-bottom: 30px;
 }
 
 section:nth-of-type(1) {
@@ -217,12 +190,7 @@ section:nth-of-type(4) {
 
 footer {
     padding: 15px;
-    background-color: #607D8B;
-}
-
-footer div {
-    max-width: 1100px;
-    margin: auto;
+    background-color: #54616F;
 }
 
 footer div div {
