@@ -87,6 +87,13 @@ svg #plane-group {
     transform-origin: 50% 50%;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 section h1 {
     text-align: center;
     font-size: 2.5rem;
