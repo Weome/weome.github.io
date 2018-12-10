@@ -269,7 +269,7 @@ function init() {
 			value: 0,
 			duration: 0
 		}, {
-			value: 750,
+			value: 600,
 			duration: 16000
 		}],
 		easing: 'linear',
