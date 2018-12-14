@@ -228,7 +228,7 @@ function init() {
 		easing: 'linear',
 		offset: 0,
 	}).add({
-		targets: '#window',
+		targets: '.window',
 		fill: [{
 			value: '#f1c40f',
 			duration: 0,
