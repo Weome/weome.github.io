@@ -157,7 +157,8 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 15px;
+    width: 800px;
+    margin: 15px auto;
 }
 
 .team .member {
