@@ -150,6 +150,30 @@ a {
     max-width: 450px;
 }
 
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team .member {
+    width: 225px;
+    margin: 15px;
+}
+
+.team .member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team .member h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 footer {
     display: flex;
     align-items: center;
