@@ -46,6 +46,7 @@ a {
 
 .header-wrapper {
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -55,7 +56,7 @@ a {
 }
 
 .header-background {
-    height: 65vh;
+    height: 87%;
     background-color: #3498db;
     z-index: 0;
     position: absolute;
@@ -104,14 +105,16 @@ a {
 #header img.home {
     width: 90%;
     max-width: 953px;
+    height: 90%;
+    max-height: 448px;
 }
 
 .content {
     text-align: center;
     width: 100%;
     max-width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
     margin: auto;
 }
 
@@ -132,10 +135,17 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .content .benefits .text {
     max-width: 500px;
+}
+
+.content .benefits img {
+    width: 100%;
+    flex: 1;
+    max-width: 450px;
 }
 
 footer {
