@@ -62,7 +62,7 @@ a {
     position: absolute;
     top: 0;
     width: 100%;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .header-background svg {
@@ -85,7 +85,8 @@ a {
     width: 60px;
 }
 
-#header h1, h2 {
+#header h1,
+h2 {
     font-weight: 400;
 }
 
@@ -121,7 +122,8 @@ a {
     max-width: 900px;
 }
 
-.content h3, .content h4 {
+.content h3,
+.content h4 {
     font-size: 27px;
     font-weight: 400;
 }
@@ -154,12 +156,11 @@ a {
 .team {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 15px;
 }
 
 .team .member {
-    width: 225px;
     margin: 15px;
 }
 
@@ -168,7 +169,15 @@ a {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+
+@media screen and (max-width: 640px) {
+    .team .member img {
+        width: 125px;
+        height: 125px;
+    }
 }
 
 .team .member h3 {
