@@ -157,7 +157,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 800px;
+    max-width: 800px;
     margin: 15px auto;
 }
 
