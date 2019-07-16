@@ -138,6 +138,10 @@ a {
     flex-wrap: wrap;
 }
 
+.content .benefits:nth-of-type(even) {
+    flex-wrap: wrap-reverse;
+}
+
 .content .benefits .text {
     max-width: 500px;
 }
