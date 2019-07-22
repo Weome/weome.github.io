@@ -184,6 +184,13 @@ h2 {
         width: 125px;
         height: 125px;
     }
+    .content .benefits {
+        text-align: justify;
+        margin: 15px;
+    }
+    .content h3, .content h4 {
+        text-align: center;
+    }
 }
 
 .team .member h3 {
