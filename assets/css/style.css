@@ -112,11 +112,15 @@ h2 {
     max-height: 448px;
 }
 
-.content {
+.content,
+.teams {
     text-align: center;
-    width: 90%;
     max-width: 1200px;
     margin: auto;
+}
+
+.content {
+    width: 90%;
 }
 
 .content.text {
@@ -124,12 +128,15 @@ h2 {
 }
 
 .content h3,
-.content h4 {
+.content h4,
+.teams h3,
+.teams h4 {
     font-size: 27px;
     font-weight: 400;
 }
 
-.content h3 {
+.content h3,
+.teams h3 {
     color: #e74c3c;
 }
 
@@ -174,7 +181,7 @@ h2 {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.team .member > div {
+.team .member>div {
     text-align: center;
 }
 
